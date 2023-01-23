@@ -1,7 +1,7 @@
 # Import Selenium libraries
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from locators import LoginPageLocators
+from locators import LoginPageLocators, MainPageLocators
 
 
 class LoginPage(object):
@@ -21,3 +21,15 @@ class LoginPage(object):
 
     def submit_form(self):
         self.driver.find_element(*self.login_button).click()
+
+
+class LogoutPage(object):
+    def __init__(self, driver):
+        self.driver = driver
+
+    # Page elements
+    logout_button = MainPageLocators.LOGOUT_BUTTON
+
+    def logout_user(self):
+        self.driver.find_element(*self.logout_button).click()
+
