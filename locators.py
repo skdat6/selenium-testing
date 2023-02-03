@@ -10,3 +10,5 @@ class LoginPageLocators(object):
 class MainPageLocators(object):
     LOGOUT_BUTTON = (By.XPATH, "//*[@id='logout_sidebar_link']")
     MAIN_PAGE_LOGO = (By.XPATH, "//*[@id='header_container']/div[1]/div[2]/div")
+    SORT_SELECT = (By.XPATH, '//*[@id="header_container"]/div[2]/div[2]/span/select')
+

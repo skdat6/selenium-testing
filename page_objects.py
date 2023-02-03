@@ -33,3 +33,13 @@ class LogoutPage(object):
     def logout_user(self):
         self.driver.find_element(*self.logout_button).click()
 
+
+class MainPage(object):
+    def __init__(self, driver):
+        self.driver = driver
+
+    selector = MainPageLocators.SORT_SELECT
+
+    def select_element(self):
+        return self.driver.find_element(*self.selector)
+
