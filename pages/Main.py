@@ -14,6 +14,7 @@ class MainPage(PageFactory):
         "page_logo": ('XPATH', '//*[@id="header_container"]/div[1]/div[2]/div'),
         "side_menu": ('XPATH', '//*[@id="react-burger-menu-btn"]'),
         "about_page": ('XPATH', '//*[@id="about_sidebar_link"]'),
+        "cart_badge": ('XPATH', '//*[@id="shopping_cart_container"]/a/span')
     }
 
     def get_logo_text(self):
@@ -25,3 +26,5 @@ class MainPage(PageFactory):
     def navigate_to_about(self):
         self.about_page.click()
 
+    def cart_badge_text(self):
+        return self.cart_badge.text
