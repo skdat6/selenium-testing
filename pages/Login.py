@@ -30,3 +30,6 @@ class LoginPage(PageFactory):
 
     def click_login(self):
         self.login_button.click_button()
+
+    def get_validation_message(self):
+        return self.login_validation_message.text
